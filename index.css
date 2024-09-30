@@ -3,11 +3,23 @@
     font-weight: 600;
 }
 
+:root {
+    --program-background-color: #f4f1f8;
+    --font-color: #2A2A2A;
+    --button-color: #647ebd;
+    --font-button-color: #021426;
+}
+
+* {
+   color: var(--font-color);
+}
+
 .parent-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 95vh;
+    background-color: var(--program-background-color);
 }
 
 header {
@@ -16,5 +28,32 @@ header {
 
 main {
     flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    border-style: none;
+    background-color: var(--button-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--font-button-color);
+}
+
+
+.book-information {
+    border-bottom: solid 3px rgb(0, 0, 0, 0.4);
+    width: auto;
+    padding-bottom: 1rem;
+}
+
+span {
+    margin: 3rem;
 }
 
