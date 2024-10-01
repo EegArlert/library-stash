@@ -13,28 +13,59 @@
 </head>
 
 <body>
-    <div class="parent-container">
+    <div class="parent-container" id="blur">
         <header>
             <h1 class="web-title">Library Stash</h1>
         </header>
 
         <main>
-
-            <button class="add-book">Add New Book</button>
-
             <div class="grid-parent-container">
-                <div class="book-information">
+                <div class="book-information-nav">
                     <span class="title">Title</span>
-                    <span class="author">Athor</span>
+                    <span class="author">Author</span>
                     <span class="page-count">Page Count</span>
                     <span class="status">Status</span>
+                    <span class="remove-btn""></span>
+
                 </div>
             </div>
+
+            <div class="btn-container">
+                        <button class="add-new">Add New Book</button>
+                </div>
         </main>
 
     </div>
 
-    <script src="library.js"></script>
+    <div class="parent-container-form" id="popup">
+        <form>
+            <button class="exit-form-btn">X</button>
+            <label for="book-title">Title</label>
+            <input type="text" id="book-title" placeholder="The 4-Hour Chef">
+
+            <label for="book-author">Author</label>
+            <input type="text" id="book-author" placeholder="Timothy Ferriss">
+
+            <label for="total-pages">Number of Pages</label>
+            <input type="number" id="total-pages" placeholder="670">
+
+            <label for="status-has-read">Status?</label>
+            <ul>
+                <li>
+                    <label for="not-finished">Not Finished</label>
+                    <input type="radio" name="status" value="notFinished" id="not-finished" checked>
+                </li>
+
+                <li>
+                    <label for="finished">Finished</label>
+                    <input type="radio" name="status" value="finished" id="finished">
+                </li>
+            </ul>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script src=" library.js"></script>
 </body>
 
 </html>
