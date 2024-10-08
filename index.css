@@ -29,68 +29,50 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
-    height: 45%;
+    height: 55%;
     padding: 50px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     background-color:#fff;
     border-radius: 20px;
-    visibility: visible;
+    visibility: hidden;
     opacity: 0;
     transition: 0.5s;
 }
-button.exit-form-btn {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    right: 2%;
-    top: 3%;
+.parent-container-form#popup.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.1s;
 }
+
 form {
     display: grid;
-    flex-direction: column;
-    align-items: center;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(5, 23%);
-    text-align: start;
-    font-size: 1.4rem;
-    margin-top: 1rem;
-}
-input {
-    height: 2.4rem;
-    border-radius: 2px;
-    margin-right: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-input:placeholder-shown{
-    font-size: 1.4rem;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    row-gap: 20px;
+    height: 100%;
+    align-items: center;
+    padding: 0 20px 0 20px;
 }
 label {
+    font-size: 1.2rem;
+}
+input {
+    font-size: 1.2rem;
+    height: 50px;
     padding-left: 10px;
 }
-label,
-input{
-    margin-bottom: 15px;
+input[type="radio"] {
+    margin-top: -3px;
+    vertical-align: middle;
 }
-ul {
-    list-style: none;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
+input::placeholder{
+    opacity: 0.5;
 }
 li {
-    width: 16rem;
-    height: 100%;
-    display: flex;
-    column-gap: 30px;
-    align-items: center;
+    display: inline;
+    padding-right: 30px;
 }
-.submit-btn {
-    grid-column: 1 / 3;
-    grid-row-start: 5;
-    justify-self: center;
-    align-self: center;
-}
+
 .grid-parent-container {
     display: grid;
     position: relative;
@@ -127,14 +109,22 @@ li {
     grid-column-start: 1;
     grid-row-start: 1;
 }
-.parent-container-form#popup.active {
-    visibility: visible;
-    opacity: 1;
-    transition: 0.1s;
+.exit-form-btn {
+    grid-column: 2 / 3;
+    justify-self: right;
+    width: 50px;
 }
+.submit-btn {
+    grid-column: 1 / 3;
+    grid-row-start: 6;
+    justify-self: center;
+    align-self: center;
+}
+
 header {
     margin-bottom: 2rem;
 }
+
 main {
     flex: 1;
     width: 95vw;

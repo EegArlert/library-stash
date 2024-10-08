@@ -21,39 +21,38 @@
         <main>
             <div class="grid-parent-container">
                 <div class="book-information-nav">
-                    <span class="title">Title</span>
-                    <span class="author">Author</span>
-                    <span class="page-count">Page Count</span>
-                    <span class="status">Status</span>
-                    <span class="remove-btn""></span>
-
+                    <span class="title main">Title</span>
+                    <span class="author main">Author</span>
+                    <span class="page-count main">Page Count</span>
+                    <span class="status main">Done</span>
+                    <span class="remove-btn main"></span>
                 </div>
             </div>
 
-            <div class="btn-container">
-                        <button class="add-new">Add New Book</button>
-                </div>
+            <div class=" btn-container">
+                <button class="add-new">Add New Book</button>
+            </div>
         </main>
-
     </div>
 
     <div class="parent-container-form" id="popup">
         <form>
-            <button class="exit-form-btn">X</button>
+            <button class="exit-form-btn" type="button">X</button>
+
             <label for="book-title">Title</label>
-            <input type="text" id="book-title" placeholder="The 4-Hour Chef">
+            <input type="text" id="book-title" name="book-title" placeholder="The 4-Hour Chef">
 
             <label for="book-author">Author</label>
-            <input type="text" id="book-author" placeholder="Timothy Ferriss">
+            <input type="text" id="book-author" name="book-author" placeholder="Timothy Ferriss">
 
             <label for="total-pages">Number of Pages</label>
-            <input type="number" id="total-pages" placeholder="670">
+            <input type="number" id="total-pages" name="total-pages" placeholder="670" >
 
             <label for="status-has-read">Status?</label>
             <ul>
                 <li>
                     <label for="not-finished">Not Finished</label>
-                    <input type="radio" name="status" value="notFinished" id="not-finished" checked>
+                    <input type="radio" name="status" value="not-finished" id="not-finished" checked> 
                 </li>
 
                 <li>
